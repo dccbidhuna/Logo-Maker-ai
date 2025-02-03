@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+
+  <!-- Other CSS -->
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css"
+    integrity="sha512-10/jx2EXwxxWqCLX/hHth/vu2KY3jCF70dCQB8TSgNjbCVAC/8vai53GfMDrO2Emgwccf2pJqxct9ehpzG+MTw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/gh/Scalesoft/fontawesome-iconpicker@393acfd/dist/css/fontawesome-iconpicker.min.css"
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bs-darkmode@1.2.0/css/bs-darkmode.min.css"
+    integrity="sha256-tf7KtsTioYEaxufEmvJcTs9g0IrGiPH+EFT8DjaZlzo=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap5-toggle@3.7.3/css/bootstrap5-toggle.min.css"
+    integrity="sha256-t86G9szZguJjgAlbfl35Y4D1pwAyLGsSrD2xmUXgMIQ=" crossorigin="anonymous">  
+  <link
+    href="https://fonts.googleapis.com/css?family=Montez|Lobster|Josefin+Sans|Shadows+Into+Light|Pacifico|Amatic+SC:700|Orbitron:400,900|Rokkitt|Righteous|Dancing+Script:700|Bangers|Chewy|Sigmar+One|Architects+Daughter|Abril+Fatface|Covered+By+Your+Grace|Kaushan+Script|Gloria+Hallelujah|Satisfy|Lobster+Two:700|Comfortaa:700|Cinzel|Courgette|Annie+Use+Your+Telescope|Baloo|Bowlby+One+SC|Bungee+Inline|Cabin+Sketch|Caveat|Contrail+One|Damion|Economica|Fascinate+Inline|Faster+One|Fredericka+the+Great|Gabriela|Just+Another+Hand|Kodchasan|Love+Ya+Like+A+Sister|Megrim|Monoton|Mouse+Memoirs|Podkova|Pompiere|Quicksand|Reenie+Beanie|Rokkitt|Six+Caps|Source+Sans+Pro|Special+Elite|Spicy+Rice|VT323|Wire+One"
+    rel="stylesheet" type="text/css" />
+  <title>Logo Maker</title>
+  <style>
+    .iconpicker-popover.popover .popover-title{background-color: var(--gray-100);}
+    .iconpicker .iconpicker-items{background-color: var(--body-bg);}
+  </style>
+</head>
+
+<body>
+  <div style="width: 800px; margin: 0 auto">
+    <h1 style="text-align:center;">Logo Maker</h1>
+    <div class="tab-content shadow-sm p-3 mb-5 rounded">
+      <main class="tab-pane active" id="home" role="tabpanel" aria-labelledby="home-tab">
+        <div class="row mb-2">
+          <div class="col-md-6 mb-2 mb-md-0">
+            <div class="card border-secondary">
+              <div class="card-header d-flex align-items-center">
+                <span class="flex-grow-1 font-weight-bold">Global</span>
+                <button class="btn btn-light btn-xs" type="button" data-toggle="collapse" data-target="#global-fieldset"
+                  aria-expanded="true" aria-controls="global-fieldset"><i class="fas fa-chevron-up" aria-hidden="true"></i></button>
+              </div>
+              <div class="card-body text-secondary collapsible collapse show" id="global-fieldset">
+                <div class="input-group input-group-sm mb-2">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon1">Layout</span>
+                  </div>
+                  <input type="checkbox" checked data-toggle="toggle" data-on="Horizontal"
+                    data-off="Vertical" data-onstyle="outline-dark" data-offstyle="outline-secondary" data-size="sm"
+                    data-param="layout" data-component="global" id="layout-toggle">
+                </div>
+                <div class="input-group input-group-sm mb-2">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon1">Shapes</span>
+                  </div>
+                  <input type="checkbox" checked data-toggle="toggle" data-on="On" data-off="Off"
+                    data-onstyle="outline-dark" data-offstyle="outline-secondary" data-size="sm" data-param="shapes"
+                    data-component="global" id="shapes-toggle">
+                </div>
+                <div class="input-group input-group-sm">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon1">Offset</span>
+                  </div>
+                  <input type="color" id="offset-clr" value="#f2f2f2" class="form-control" aria-label="color"
+                    aria-describedby="basic-addon1" data-param="offsetColor" data-component="global"/>
+                  <input type="range" class="form-control custom-range w-25" data-param="offsetSize"
+                    data-component="global" value="0" min="0" max="10" step=".5" id="offset_size-rng" />
+                  <div class="input-group-append" data-display="value">
+                    <span class="input-group-text" id="offset_size-value">0</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="card border-secondary">
+              <div class="card-header d-flex align-items-center">
+                <span class="flex-grow-1 font-weight-bold">Icon</span>
+                <button class="btn btn-light btn-xs" type="button" data-toggle="collapse" data-target="#icon-fieldset"
+                  aria-expanded="true" aria-controls="icon-fieldset"><i class="fas fa-chevron-up" aria-hidden="true"></i></button>
+              </div>
+              <div class="card-body text-secondary collapsible collapse show" id="icon-fieldset">
+                <div class="input-group input-group-sm mb-2">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon1">Icon</span>
+                  </div>
+                  <div class="input-group-apppend ml-1">
+                    <div class="btn-group d-flex btn-group-sm">
+                      <button id="icp-component" type="button"
+                        class="btn btn-outline-secondary iconpicker-component w-100">
+                        <i class="fa fa-fw fa-heart" aria-hidden="true"></i>
+                      </button>
+                      <button id="icp" type="button" class="btn btn-secondary dropdown-toggle" data-selected="fa-car"
+                        data-toggle="dropdown">
+                        <span class="caret"></span>
+                        <span class="sr-only">Toggle Dropdown</span>
+                      </button>
+                      <div class="dropdown-menu"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="input-group input-group-sm mb-2">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon1">Size</span>
+                  </div>
+                  <input type="range" class="form-control custom-range" value="48" min="25" max="100" step="1"
+                    id="icon-sz" data-param="fontSize" data-component="icon" />
+                  <div class="input-group-append" data-display="value">
+                    <span class="input-group-text" id="icon_size-value">48</span>
+                  </div>
+                </div>
+                <div class="input-group input-group-sm">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon1">Color</span>
+                  </div>
+                  <input type="color" id="icon-clr" class="form-control" aria-label="color"
+                    aria-describedby="basic-addon1" data-param="color" data-component="icon" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card border-secondary mb-2">
+          <div class="card-header d-flex align-items-center">
+            <span class="flex-grow-1 font-weight-bold">Main</span>
+            <button class="btn btn-light btn-xs" type="button" data-toggle="collapse" data-target="#main-fieldset"
+              aria-expanded="true" aria-controls="main-fieldset"><i class="fas fa-chevron-up" aria-hidden="true"></i></button>
+          </div>
+          <div class="card-body text-secondary collapsible collapse show" id="main-fieldset">
+            <div class="input-group input-group-sm mb-2">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon1">Text</span>
+              </div>
+              <input type="text" id="main-input" class="form-control" aria-label="outblock"
+                aria-describedby="basic-addon1" data-param="text" data-component="main" />
+            </div>
+            <div class="input-group input-group-sm mb-2">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon1">Font</span>
+              </div>
+              <input type="color" id="main-clr" class="form-control" aria-label="color" aria-describedby="basic-addon1"
+                data-param="color" data-component="main" />
+              <select id="main_font-select" class="form-control w-50" aria-label="font" aria-describedby="basic-addon1"
+                data-param="fontFamily" data-component="main"></select>
+              <input type="checkbox" checked data-toggle="toggle" data-on="Bold" data-off="Normal"
+                data-onstyle="outline-dark" data-offstyle="outline-secondary" data-size="sm" data-param="font_weight"
+                data-component="main" id="main_weight-toggle">
+            </div>
+            <div class="row mb-2">
+              <div class="input-group input-group-sm mb-2 mb-md-0 col-md-6">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon1">Size</span>
+                </div>
+                <input type="range" class="form-control custom-range" value="48" min="10" max="100" step="1"
+                  id="main-sz" data-param="fontSize" data-component="main" />
+                <div class="input-group-append" data-display="value">
+                  <span class="input-group-text" id="main_size-value">48</span>
+                </div>
+              </div>
+              <div class="input-group input-group-sm col-md-6">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon1">Letter spacing</span>
+                </div>
+                <input type="range" class="form-control custom-range" data-param="letter_space" data-component="main"
+                  value="0" min="0" max="20" step="1" id="main_letter_space-rng" />
+                <div class="input-group-append" data-display="value">
+                  <span class="input-group-text" id="main_letter_space-value">0</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card border-secondary mb-2">
+          <div class="card-header d-flex align-items-center">
+            <span class="flex-grow-1 font-weight-bold">Accent</span>
+            <button class="btn btn-light btn-xs" type="button" data-toggle="collapse" data-target="#accent-fieldset"
+              aria-expanded="true" aria-controls="accent-fieldset"><i class="fas fa-chevron-up" aria-hidden="true"></i></button>
+          </div>
+          <div class="card-body text-secondary collapsible collapse show" id="accent-fieldset">
+            <div class="input-group input-group-sm mb-2">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon1">Text</span>
+              </div>
+              <input type="text" id="accent-input" class="form-control" aria-label="inblock"
+                aria-describedby="basic-addon1" data-param="text" data-component="accent" />
+            </div>
+            <div class="input-group input-group-sm mb-2">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon1">Font</span>
+              </div>
+              <input type="color" value="#cccccc" id="accent-clr" class="form-control" aria-label="color2"
+                aria-describedby="basic-addon1" data-param="color" data-component="accent" />
+              <select id="accent_font-select" class="form-control w-50" aria-label="font"
+                aria-describedby="basic-addon1" data-param="fontFamily" data-component="accent"></select>
+              <input type="checkbox" checked data-toggle="toggle" data-on="Bold" data-off="Normal"
+                data-onstyle="outline-dark" data-offstyle="outline-secondary" data-size="sm" data-param="font_weight"
+                data-component="accent" id="accent_weight-toggle">
+            </div>
+            <div class="row mb-2">
+              <div class="input-group input-group-sm mb-2 mb-md-0 col-md-6">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon1">Size</span>
+                </div>
+                <input type="range" class="form-control custom-range" value="48" min="10" max="100" step="1"
+                  id="accent-sz" data-param="fontSize" data-component="accent" />
+                <div class="input-group-append" data-display="value">
+                  <span class="input-group-text" id="accent_size-value">48</span>
+                </div>
+              </div>
+              <div class="input-group input-group-sm col-md-6">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon1">Letter spacing</span>
+                </div>
+                <input type="range" class="form-control custom-range" data-param="letter_space" data-component="accent"
+                  value="0" min="0" max="20" step="1" id="accent_letter_space-rng" />
+                <div class="input-group-append" data-display="value">
+                  <span class="input-group-text" id="accent_letter_space-value">0</span>
+                </div>
+              </div>
+            </div>
+            <div class="input-group input-group-sm">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon1">Effects</span>
+              </div>
+              <div class="btn-group ml-1" role="group" aria-label="Basic example">
+                <a class="btn btn-outline-secondary btn-sm" id="compliment_color-btn">Compliment Color</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <section class="container row">
+          <div id="fav-container" class="col-md-6 text-center">
+            <p class="font-weight-bold">Favicon</p>
+            <canvas id="fav-canvas" style="border: none solid #d3d3d3" class="mt-1"></canvas>
+          </div>
+          <div id="logo-container" class="col-md-6 text-center">
+            <p class="font-weight-bold">Logo</p>
+            <canvas id="logo-canvas" style="border: none solid #d3d3d3" class="mt-1"></canvas>
+          </div>
+        </section>
+
+        <div class="btn-toolbar mb-2" role="toolbar" aria-label="Toolbar with button groups">
+          <div class="input-group input-group-sm">
+            <div class="input-group-prepend">
+              <div class="input-group-text">Format</div>
+            </div>
+            <select id="export_format-select" class="form-control text-uppercase" aria-label="format"
+              aria-describedby="basic-addon1">
+              <option value="image/png">png</option>
+              <option value="image/jpeg">jpg</option>
+              <option value="image/webp">webp</option>
+              <option value="image/svg+xml">svg</option>
+            </select>
+          </div>
+          <div class="btn-group btn-group-sm ml-1" role="group" aria-label="First group">
+            <a href="#" class="btn btn-outline-secondary" id="fav_download-btn" download="favicon.png">Download
+              favicon</a>
+            <a href="#" class="btn btn btn-outline-secondary" id="logo_download-btn" download="logo.png">Download
+              logo</a>
+          </div>
+        </div>
+      </main>
+     
+     
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/gh/Scalesoft/fontawesome-iconpicker@393acfd/dist/js/fontawesome-iconpicker.min.js"
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bs-darkmode@1.2.0/js/bs-darkmodejquery.min.js"
+    integrity="sha256-F2n4uDLTOf7uGUhhaW0zzfed4SPHEToImxLu3FHaga8=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap5-toggle@3.7.3/js/bootstrap5-toggle.min.js"
+    integrity="sha256-ctgYdt/F2ief8nbGZXReoYssWvM5rSwz6sS0CFcyy2c=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bs-custom-file-input@1.3.4/dist/bs-custom-file-input.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/canvas2svg-visjs@1.0.21/canvas2svg.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/2.1.0/showdown.min.js"
+    integrity="sha512-LhccdVNGe2QMEfI3x4DVV3ckMRe36TfydKss6mJpdHjNFiV07dFpS2xzeZedptKZrwxfICJpez09iNioiSZ3hA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script>
+    class SimplegenTextComponent{constructor(t,e,n,a,o,i,l=0){this.name=t,this.text=e,this.color=n,this.fontFamily=a,this.fontWeight=o,this.fontSize=i,this.letterSpacing=l}init(){$('input[data-component="'+this.name+'"][data-param="text"]').val(this.text),$('input[data-component="'+this.name+'"][data-param="color"]').val(this.color),$('select[data-component="'+this.name+'"][data-param="fontFamily"]').val(this.fontFamily),setSelectFont($('select[data-component="'+this.name+'"][data-param="fontFamily"]')[0]),$('input[data-component="'+this.name+'"][data-param="font_weight"]').bootstrapToggle("bold"==this.fontWeight?"on":"off");var t=$('input[data-component="'+this.name+'"][data-param="fontSize"]');t.val(this.fontSize),t.siblings('.input-group-append[data-display="value"]').children("span").html(this.fontSize);var e=$('input[data-component="'+this.name+'"][data-param="letter_space"]');e.val(this.letterSpacing),e.siblings('.input-group-append[data-display="value"]').children("span").html(this.letterSpacing)}sync(t){this.text=t.text,this.color=t.color,this.fontFamily=t.fontFamily,this.fontWeight=t.fontWeight,this.fontSize=t.fontSize,this.letterSpacing=t.letterSpacing}getText(){return this.text.split("").join(" ".repeat(this.letterSpacing))}getFont(){return this.fontWeight+" "+this.fontSize+"px "+this.fontFamily}}var canvas_logo=document.getElementById("logo-canvas");canvas_logo.width=5,canvas_logo.height=5;var ctx_logo=canvas_logo.getContext("2d"),canvas_fav=document.getElementById("fav-canvas");canvas_fav.width=5,canvas_fav.height=5;var ctx_fav=canvas_fav.getContext("2d");let icon=new SimplegenTextComponent("icon",window.getComputedStyle(document.querySelector("#icp-component i"),":before").content.replace(/['"]/g,""),"#000000",window.getComputedStyle(document.querySelector("#icp-component i")).fontFamily,window.getComputedStyle(document.querySelector("#icp-component i")).fontWeight,48),main=new SimplegenTextComponent("main","","#000000","Arial","bold",48),accent=new SimplegenTextComponent("accent","","#cccccc","Arial","bold",48);var components={icon:icon,main:main,accent:accent};const padding={width:7,height:7,internal:{x:3,y:5}};Object.freeze(padding);var global={offset:{size:0,color:"#e2e2e2"},layout:"HORIZONTAL",shapes:!0};function setSelectFont(t){t&&(t.style.fontFamily=t.value)}function refreshGUI(t=[]){if(!(t=t.map(t=>t.toLowerCase())).includes("layout")){var e=$('input[data-toggle="toggle"][data-param="layout"]');switch(global.layout.toUpperCase()){case"HORIZONTAL":e.bootstrapToggle("on");break;case"VERTICAL":e.bootstrapToggle("off");break;default:global.layout="HORIZONTAL",e.bootstrapToggle("on")}}if(!t.includes("shapes")){var n=$('input[data-toggle="toggle"][data-param="shapes"]');global.shapes?n.bootstrapToggle("on"):n.bootstrapToggle("off")}if(!t.includes("offset")){var a=$('input[data-component="global"][data-param="offsetSize"]');a.val(global.offset.size),a.siblings('.input-group-append[data-display="value"]').children("span").html(global.offset.size.toFixed(1)),$('input[data-component="global"][data-param="offsetColor"]').val(global.offset.color)}t.includes("icon")||(icon.init(),$("#icp-component").children("i").remove(),$("#icp-component").append($("<i></i>").attr("style","font-style: normal; font-weight: "+icon.fontWeight+"; font-family: "+icon.fontFamily).html(icon.text))),t.includes("main")||main.init(),t.includes("accent")||accent.init()}function render(){document.fonts.ready.then(t=>{renderFav(ctx_fav,canvas_fav),renderLogo(ctx_logo,canvas_logo)})}function renderFav(t,e){t.font=icon.getFont(),e.width=t.measureText(icon.text).width+2*padding.width,e.height=icon.fontSize+2*padding.height,t.textBaseline="middle",t.font=icon.getFont(),t.fillStyle=icon.color,t.fillText(icon.text,padding.width,e.height/2)}function renderLogo(t,e){"HORIZONTAL"==global.layout.toUpperCase()?renderLogoHorizontal(t,e):renderLogoVertical(t,e)}function renderLogoHorizontal(t,e){t.font=icon.getFont();var n=t.measureText(icon.text).width;t.font=main.getFont();var a=t.measureText(main.getText()).width;t.font=accent.getFont();var o=t.measureText(accent.getText()).width,i=Math.max(icon.fontSize,main.fontSize,accent.fontSize),l=padding.width,c=l+n+(""!=main.text?padding.internal.x:0),r=c+a+(""!=accent.text?padding.internal.x:0)+(""!=accent.text&&global.shapes?2*padding.internal.x:0);e.width=n+(""!=main.text?padding.internal.x:0)+a+(""!=accent.text?padding.internal.x:0)+(""!=accent.text&&global.shapes?4*padding.internal.x:0)+o+2*padding.width,e.height=i+(""!=accent.text&&global.shapes?2*padding.internal.y:0)+2*padding.height;var s=e.height/2;if(t.textBaseline="middle",0==global.offset.size||(t.font=icon.getFont(),t.fillStyle=global.offset.color,t.fillText(icon.text,l+global.offset.size,s+global.offset.size),t.font=main.getFont(),t.fillStyle=global.offset.color,t.fillText(main.getText(),c+global.offset.size,s+global.offset.size),global.shapes||(t.font=accent.getFont(),t.fillStyle=global.offset.color,t.fillText(accent.getText(),r+global.offset.size,s+global.offset.size))),""!=accent.text&&global.shapes){t.strokeStyle=main.color,t.fillStyle=main.color;var d={};d.x=r-2*padding.internal.x,d.y=padding.height;var g={};g.width=o+4*padding.internal.x,g.height=e.height-2*padding.height,roundRect(t,d,g,5,!0,!0)}t.font=icon.getFont(),t.fillStyle=icon.color,t.fillText(icon.text,l,s),t.font=main.getFont(),t.fillStyle=main.color,t.fillText(main.getText(),c,s),t.font=accent.getFont(),t.fillStyle=accent.color,t.fillText(accent.getText(),r,s)}function renderLogoVertical(t,e){t.font=icon.getFont();var n=t.measureText(icon.text).width;t.font=main.getFont();var a=t.measureText(main.getText()).width;t.font=accent.getFont();var o=Math.max(n,a,t.measureText(accent.getText()).width),i=(o+2*padding.width)/2,l=padding.height+icon.fontSize/2,c=l+icon.fontSize/2+padding.internal.y+main.fontSize/2,r=c+main.fontSize/2+padding.internal.y+accent.fontSize/2;e.width=o+2*padding.width,e.height=icon.fontSize+padding.internal.y+main.fontSize+padding.internal.y+accent.fontSize+2*padding.height,t.textAlign="center",t.textBaseline="middle",""!=accent.text&&global.shapes&&(t.strokeStyle=main.color,t.moveTo(i-a/2,c+main.fontSize/2+padding.internal.y/2),t.lineTo(i+a/2,c+main.fontSize/2+padding.internal.y/2),t.lineWidth=2,t.stroke()),0!=global.offset.size&&(t.font=icon.getFont(),t.fillStyle=global.offset.color,t.fillText(icon.text,i+global.offset.size,l+global.offset.size),t.font=main.getFont(),t.fillStyle=global.offset.color,t.fillText(main.getText(),i+global.offset.size,c+global.offset.size),t.font=accent.getFont(),t.fillStyle=global.offset.color,t.fillText(accent.getText(),i+global.offset.size,r+global.offset.size)),t.font=icon.getFont(),t.fillStyle=icon.color,t.fillText(icon.text,i,l),t.font=main.getFont(),t.fillStyle=main.color,t.fillText(main.getText(),i,c),t.font=accent.getFont(),t.fillStyle=accent.color,t.fillText(accent.getText(),i,r)}function roundRect(t,e,n,a=5,o=!1,i=!0){a="number"==typeof a?{tl:a,tr:a,br:a,bl:a}:{tl:0,tr:0,br:0,bl:0,...a},t.beginPath(),t.moveTo(e.x+a.tl,e.y),t.lineTo(e.x+n.width-a.tr,e.y),t.quadraticCurveTo(e.x+n.width,e.y,e.x+n.width,e.y+a.tr),t.lineTo(e.x+n.width,e.y+n.height-a.br),t.quadraticCurveTo(e.x+n.width,e.y+n.height,e.x+n.width-a.br,e.y+n.height),t.lineTo(e.x+a.bl,e.y+n.height),t.quadraticCurveTo(e.x,e.y+n.height,e.x,e.y+n.height-a.bl),t.lineTo(e.x,e.y+a.tl),t.quadraticCurveTo(e.x,e.y,e.x+a.tl,e.y),t.closePath(),o&&t.fill(),i&&t.stroke()}function exportCanva(t,e,n,a){var o,i,l=document.getElementById("export_format-select"),c=l.options[l.selectedIndex].value,r=l.options[l.selectedIndex].text,s=e.cloneNode(!0);switch(c){case"image/png":case"image/webp":i=e.toDataURL(c);break;case"image/jpeg":(o=s.getContext("2d")).fillStyle="#FFF",o.fillRect(0,0,s.width,s.height),o.drawImage(e,0,0),i=e.toDataURL(c);break;case"image/svg+xml":a(o=new C2S(s.width,s.height),s);var d="<style>\r\n";d+='@import url("https://fonts.googleapis.com/css?family=Montez|Lobster|Josefin+Sans|Shadows+Into+Light|Pacifico|Amatic+SC:700|Orbitron:400,900|Rokkitt|Righteous|Dancing+Script:700|Bangers|Chewy|Sigmar+One|Architects+Daughter|Abril+Fatface|Covered+By+Your+Grace|Kaushan+Script|Gloria+Hallelujah|Satisfy|Lobster+Two:700|Comfortaa:700|Cinzel|Courgette|Annie+Use+Your+Telescope|Baloo|Bowlby+One+SC|Bungee+Inline|Cabin+Sketch|Caveat|Contrail+One|Damion|Economica|Fascinate+Inline|Faster+One|Fredericka+the+Great|Gabriela|Just+Another+Hand|Kodchasan|Love+Ya+Like+A+Sister|Megrim|Monoton|Mouse+Memoirs|Podkova|Pompiere|Quicksand|Reenie+Beanie|Rokkitt|Six+Caps|Source+Sans+Pro|Special+Elite|Spicy+Rice|VT323|Wire+One");\r\n',d+='@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css");\r\n',i="data:image/svg+xml;charset=utf-8,"+encodeURIComponent('<?xml version="1.0" standalone="no"?>\r\n'+o.getSerializedSvg().replace("<defs/>",d+"</style>\r\n<defs/>"))}t.setAttribute("download",n+"."+r),t.href=i}function hexToComplimentary(t){var e,n,a="rgb("+(t=t.replace("#","")).match(RegExp("(.{"+t.length/3+"})","g")).map(function(e){return parseInt(t.length%2?e+e:e,16)}).join(",")+")",o=(a=a.replace(/[^\d,]/g,"").split(","))[0],i=a[1],l=a[2],c=Math.max(o/=255,i/=255,l/=255),r=Math.min(o,i,l),s=(c+r)/2;if(c==r)e=n=0;else{var d=c-r;n=s>.5?d/(2-c-r):d/(c+r),c==o&&i>=l?e=1.0472*(i-l)/d:c==o&&i<l?e=1.0472*(i-l)/d+6.2832:c==i?e=1.0472*(l-o)/d+2.0944:c==l&&(e=1.0472*(o-i)/d+4.1888)}if(e=e/6.2832*360+0,(e+=180)>360&&(e-=360),e/=360,0===n)o=i=l=s;else{var g=function t(e,n,a){return(a<0&&(a+=1),a>1&&(a-=1),a<1/6)?e+(n-e)*6*a:a<.5?n:a<2/3?e+(n-e)*(2/3-a)*6:e},p=s<.5?s*(1+n):s+n-s*n,f=2*s-p;o=g(f,p,e+1/3),i=g(f,p,e),l=g(f,p,e-1/3)}return o=Math.round(255*o),i=Math.round(255*i),"#"+(16777216|(a=(l=Math.round(255*l))|i<<8|o<<16)).toString(16).substring(1)}$(document).ready(function(){for(let t of($('.widget[role="md2html"]').each(function(t,e){var n=new XMLHttpRequest;n.open("GET",$(e).attr("data-widget"),!0),n.send(null),n.onreadystatechange=function(){if(4===n.readyState&&200===n.status){var t=new showdown.Converter;$(e).html(t.makeHtml(n.responseText))}}}),$("#icp").iconpicker({}),bsCustomFileInput.init(),["Arial","Montez","Lobster","Josefin Sans","Shadows Into Light","Pacifico","Amatic SC","Orbitron","Rokkitt","Righteous","Dancing Script","Bangers","Chewy","Sigmar One","Architects Daughter","Abril Fatface","Covered By Your Grace","Kaushan Script","Gloria Hallelujah","Satisfy","Lobster Two","Comfortaa","Cinzel","Courgette","Annie Use Your Telescope","Baloo","Bowlby One SC","Bungee Inline","Cabin Sketch","Caveat","Contrail One","Damion","Economica","Fascinate Inline","Faster One","Fredericka the Great","Gabriela","Just Another Hand","Kodchasan","Love Ya Like A Sister","Megrim","Monoton","Mouse Memoirs","Podkova","Pompiere","Quicksand","Reenie Beanie","Rokkitt","Six Caps","Source Sans Pro","Special Elite","Spicy Rice","VT323","Wire One",])){var e=document.createElement("option");e.value=e.innerHTML=t,e.style.fontFamily=t,document.getElementById("main_font-select").add(e.cloneNode(!0)),document.getElementById("accent_font-select").add(e.cloneNode(!0))}refreshGUI(),render()}),$("#icp").on("iconpickerSelected",function(t){$("#icp-component i").attr("style","").html(""),icon.text=window.getComputedStyle(document.querySelector("#icp-component i"),":before").content.replace(/['"]/g,""),icon.fontFamily=window.getComputedStyle(document.querySelector("#icp-component i")).fontFamily,icon.fontWeight=window.getComputedStyle(document.querySelector("#icp-component i")).fontWeight,render()}),$(".collapsible").on("hidden.bs.collapse",function(){$('button[data-toggle="collapse"][data-target="#'+$(this).attr("id")+'"]').html('<i class="fas fa-chevron-down"></i>')}),$(".collapsible").on("shown.bs.collapse",function(){$('button[data-toggle="collapse"][data-target="#'+$(this).attr("id")+'"]').html('<i class="fas fa-chevron-up"></i>')}),$('input[type="text"][data-param="text"]').on("input",function(t){components[$(this).attr("data-component")].text=$(this).val(),render()}),$('input[type="range"][data-param="offsetSize"]').on("input",function(t){global.offset.size=parseFloat($(this).val()),$(this).siblings('.input-group-append[data-display="value"]').children("span").html(global.offset.size.toFixed(1)),render()}),$("#compliment_color-btn").on("click",function(){accent.color=hexToComplimentary(main.color),accent.init(),render()}),$('input[data-toggle="toggle"][data-param="layout"]').on("change",function(t){$(this).prop("checked")?(global.layout="HORIZONTAL",accent.fontSize=48):(global.layout="VERTICAL",accent.fontSize=12),refreshGUI(["layout"]),render()}),$('input[data-toggle="toggle"][data-param="font_weight"]').on("change",function(t){components[$(this).attr("data-component")].fontWeight=$(this).prop("checked")?"bold":"normal",render()}),$('input[data-toggle="toggle"][data-param="shapes"]').on("change",function(t){global.shapes=$(this).prop("checked"),render()}),$('input[type="color"][data-param="color"]').on("input",function(t){components[$(this).attr("data-component")].color=$(this).val(),render()}),$('input[type="color"][data-param="offsetColor"]').on("input",function(t){global.offset.color=$(this).val(),render()}),$('input[type="range"][data-param="fontSize"]').on("input",function(t){components[$(this).attr("data-component")].fontSize=parseInt($(this).val()),$(this).siblings('.input-group-append[data-display="value"]').children("span").html($(this).val()),render()}),$('input[type="range"][data-param="letter_space"]').on("input",function(t){components[$(this).attr("data-component")].letterSpacing=parseInt($(this).val()),$(this).siblings('.input-group-append[data-display="value"]').children("span").html($(this).val()),render()}),$('select[data-param="fontFamily"]').on("input",function(t){components[$(this).attr("data-component")].fontFamily=$(this).val(),setSelectFont($(this)[0]),render()}),$("#fav_download-btn").on("click",function(t){exportCanva($(this)[0],canvas_fav,"favicon",renderFav)}),$("#logo_download-btn").on("click",function(t){exportCanva($(this)[0],canvas_logo,"logo",renderLogo)}),$("#conf_download-btn").on("click",function(t){$(this).attr("href","data:application/json;charset=utf-8,"+encodeURIComponent(JSON.stringify({version:"v1.0.0",components:components,global:global})))}),$("#conf_upload-fs").on("change",function(t){var e=$(this),n=new FileReader;n.onload=function(t){try{var n,a=JSON.parse(t.target.result);if("v1.0.0"==a.version)icon.sync(a.components.icon),main.sync(a.components.main),accent.sync(a.components.accent),global.offset.size=a.global.offset.size,global.offset.color=a.global.offset.color,global.layout=a.global.layout,global.shapes=a.global.shapes;else throw new DOMException("Version not supported","VersionError");$(e).addClass("is-valid").removeClass("is-invalid"),$(e).parent().children(".feedback").remove(),$(e).parent().append($("<div></div>").addClass("feedback valid-feedback").html("Nice! We load the config.")),refreshGUI()}catch(o){n="VersionError"==o.name?"Ouups! File version not supported.":"Ouups! We can't parse the config.",$(e).addClass("is-invalid").removeClass("is-valid"),$(e).parent().children(".feedback").remove(),$(e).parent().append($("<div></div>").addClass("feedback invalid-feedback").html(n))}render()},n.readAsText(t.target.files[0])});
+  </script>
+</body>
+
+</html>
